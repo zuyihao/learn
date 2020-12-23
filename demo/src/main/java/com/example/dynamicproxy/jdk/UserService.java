@@ -1,4 +1,4 @@
-package com.example.dynamicproxy;
+package com.example.dynamicproxy.jdk;
 
 public interface UserService {
     public void select();

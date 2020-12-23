@@ -1,4 +1,4 @@
-package com.example.dynamicproxy;
+package com.example.dynamicproxy.jdk;
 
 import sun.misc.ProxyGenerator;
 
