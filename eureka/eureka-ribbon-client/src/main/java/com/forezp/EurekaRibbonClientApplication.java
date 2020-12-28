@@ -9,12 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan("com.*")
-public class EurekaClientApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(EurekaClientApplication.class, args);
-	}
-
+public class EurekaRibbonClientApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaRibbonClientApplication.class,args);
+    }
 }
-
-
