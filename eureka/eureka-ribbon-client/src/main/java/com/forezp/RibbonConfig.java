@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class RibbonConfig {
     @Bean
     @LoadBalanced
-    RestTemplate restTemplate(){
+    RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
 }

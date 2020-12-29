@@ -2,8 +2,10 @@
 spring:
   profiles: eureka-client-1
   application:
-    name: eureka-client-1
+    name: eureka-client
 eureka:
+  instance:
+    hostname: eureka-client
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
@@ -14,8 +16,10 @@ server:
 spring:
   profiles: eureka-client-2
   application:
-    name: eureka-client-2
+    name: eureka-client
 eureka:
+  instance:
+    hostname: eureka-client
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
