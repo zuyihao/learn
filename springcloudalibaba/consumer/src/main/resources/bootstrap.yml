@@ -1,0 +1,34 @@
+---
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles: consumer-3
+  application:
+    name: nacos-8003
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: huyiju
+server:
+  port: 8003
+---
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles: consumer-4
+  application:
+    name: nacos-8004
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: huyiju
+server:
+  port: 8004

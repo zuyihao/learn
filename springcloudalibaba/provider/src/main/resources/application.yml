@@ -1,0 +1,22 @@
+---
+spring:
+  profiles: provider-1
+  application:
+    name: nacos-8001
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+server:
+  port: 8001
+---
+spring:
+  profiles: provider-2
+  application:
+    name: nacos-8002
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+server:
+  port: 8002

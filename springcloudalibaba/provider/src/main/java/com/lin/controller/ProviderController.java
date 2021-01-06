@@ -9,12 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProviderController {
     @Value("${server.port}")
     String port;
-    @RestController
-    public class add {
-        @GetMapping(value = "/add")
-        public String add() {
+    @GetMapping(value = "/add")
+    public String add() {
 
-            return "服务端nocas端口号:"+port;
-        }
+        return "服务端nocas端口号:"+port;
     }
 }
