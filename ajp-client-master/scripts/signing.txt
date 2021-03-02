@@ -1,0 +1,18 @@
+#create a gpg key pair and send to key server
+#gpg --gen-key
+#gpg --list-keys
+##gpg --keyserver hkp://keys.gnupg.net --send-keys <the id of my public key>
+
+#go to oss.sonatype.org, login or generate a new user token (user profile menu, 'user token' tab)
+
+#deploy to staging repository :
+m#vn clean package source:jar javadoc:jar
+#mvn gpg:sign-and-deploy-file -DpomFile=target/pom.xml \
+# -Dfile=target/ajpclient-$VERSION.jar 
+# -Dsources=target/ajpclient-$VERSION-sources.jar
+# -Djavadoc=target/ajpclient-$VERSION-javadoc.jar
+# -Durl=https://user:password@oss.sonatype.org/service/local/staging/deploy/maven2/
+# -DrepositoryId=sonatype_oss
+
+#return to oss.sonatype.org, select staging repository (=last item in "Staging repositories" list), choose 'close' button (at the top of the screen)
+
